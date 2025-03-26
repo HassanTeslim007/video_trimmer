@@ -3,7 +3,6 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui';
 
-import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
 import 'package:path_provider/path_provider.dart';
 
 /// Formats a [Duration] object to a human-readable string.
@@ -117,7 +116,7 @@ Stream<List<Uint8List?>> generateThumbnail({
       ].join(' ');
 
       // Execute the FFmpeg command
-      await FFmpegKit.execute(command);
+      // await FFmpegKit.execute(command);
 
       // Read the generated thumbnail file
       if (File(thumbnailPath).existsSync()) {
